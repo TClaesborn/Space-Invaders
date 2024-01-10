@@ -7,7 +7,6 @@ using GraphicsBase;
 
 class Player : Spaceship
 {
-    
     //powerups
     bool doubleShot = false;
 

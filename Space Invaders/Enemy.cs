@@ -20,6 +20,10 @@ internal class Enemy : Spaceship
     protected override void Move(int x)
     {
         pos.Y += x;
+        if(pos.Y > Console.WindowHeight-2)
+        {
+            pos.Y = 1;
+        }
         
     }
 

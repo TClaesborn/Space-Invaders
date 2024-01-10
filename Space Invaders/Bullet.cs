@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 public class Bullet
 {
-    Point3d pos = new();
+    public Point3d pos = new();
     double lifeTime = 3;
     public bool isAlive = true;
 
@@ -37,6 +37,10 @@ public class Bullet
             Console.SetCursorPosition((int)pos.X, (int)pos.Y);
             Console.Write("*");
         }
+    }
+    public Point3d getPos()
+    {
+        return pos;
     }
 }
 

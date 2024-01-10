@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 abstract class Spaceship
 {
-    protected Point3d pos = new();
+
+    protected int hitpoints = 2;
+    public Point3d pos = new();
     char ship = 'A';
     ConsoleColor color;
+    public bool isAlive = true;
 
-    protected Bullet[] bullets = new Bullet[20];    //Sets maximum bulletcount to 20
-    protected int bulletCounter = 0;                //Keeps track of the amount of bullets
+    public Bullet[] bullets = new Bullet[20];    //Sets maximum bulletcount to 20
+    public int bulletCounter = 0;                //Keeps track of the amount of bullets
     protected int maxBullets = 5;                   //Current max allowed bullets
 
     public Spaceship(char ship, ConsoleColor color) 
@@ -67,6 +70,15 @@ abstract class Spaceship
 
                 bullets[bulletCounter] = null; //Ta bort sista kulan
             }
+        }
+    }
+
+    public void Destroy()
+    {
+        hitpoints--;
+        if(hitpoints <= 0)
+        {
+            isAlive = false;
         }
     }
 
