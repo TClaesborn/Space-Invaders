@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 /* TODO
  * 
  * Highscore
- * Hitpoints
- * Destruction of ships
- * Collision checks
+ * 
  */
 internal class Game
 {
