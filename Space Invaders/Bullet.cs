@@ -26,7 +26,7 @@ public class Bullet
     public void Move()
     {
         pos.Y -= 1;
-        if (pos.Y <= 2)
+        if (pos.Y <= 1)
             isAlive = false;
     }
 

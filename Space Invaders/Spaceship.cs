@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-internal class Spaceship
+abstract class Spaceship
 {
     protected Point3d pos = new();
     char ship = 'A';
@@ -22,7 +22,7 @@ internal class Spaceship
         this.color = color;
     }
 
-    protected void Move(int x) //Handles movement of ship
+    protected virtual void Move(int x) //Handles movement of ship
     {
         pos.X += x;
 
